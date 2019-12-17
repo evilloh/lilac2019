@@ -1,0 +1,112 @@
+.blackbg{
+    background-color: rgb(22, 22, 22);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    animation: disappearBg .8s forwards;
+}
+
+.nightContainer{        
+    background-image: url(../images/fondo.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mae, .gregg, .evilloh{
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.mae:hover, .gregg:hover, .evilloh:hover
+{
+    filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.281));
+    transform: rotate(-1deg);
+}
+.mae{
+    left: 8rem;
+}
+
+.gregg{
+    right: 24%;
+}
+
+.evilloh{
+    right: 2rem;
+}
+
+.logo{
+    width: 15%;
+    margin-left: 2rem;
+}
+
+.dialogue1{
+    position: absolute;
+    left: 8rem;
+    top: 30%;
+    width: 24%;
+}
+
+.dialogue2{
+    position: absolute;
+    right: 24%;
+    top: 34%;
+    width: 24%;
+}
+
+.dialogue3{
+    position: absolute;
+    right: 2rem;
+    top: 32%;
+    width: 24%;
+}
+
+.dialogueoff{
+    display: none;
+}
+
+.dialogueon{
+    display: block;
+    animation: dialogueAppear 0.3s;
+}
+
+@keyframes dialogueAppear {
+    from {transform: translateY(10px) scale(.88);}
+    to {transform: translateY(0px) scale(1);}
+}
+
+@keyframes disappearBg {
+    from {transform: translateX(0); display: block;}
+    to {transform: translateX(100vw) scale(1); display: none;}
+}
+
+
+@media screen and (max-width: 1250px) {
+    .dialogue1{
+        top: 40%;
+    }    
+    .dialogue2{
+        top: 44%;
+    }    
+    .dialogue3{
+        top: 42%;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .dialogue1{
+        top: 50%;
+    }    
+    .dialogue2{
+        top: 54%;
+    }    
+    .dialogue3{
+        top: 52%;
+    }
+}
