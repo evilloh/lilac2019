@@ -1,0 +1,57 @@
+.celesteContainer{       
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.celestebg2, .celestebg3 {
+    transition: all 2s;
+}
+.celestebg2, .celestebg3, .celestebg1{        
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    object-fit: cover;
+    min-height: 100vh;
+}
+
+.evilloh, .badeline{
+position: absolute;
+top: 40%;
+z-index: 10;
+}
+.evilloh{
+left: 20%;
+}
+
+.badeline{
+right: 20%;
+}
+
+.blackbg{
+    background-color: rgb(22, 22, 22);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    animation: disappearBg 2.5s forwards;
+    opacity: 1;
+}
+
+@keyframes disappearBg {
+    from {opacity: 1; z-index: 20;}
+    30% {opacity: 1; z-index: 20;}
+    99%{opacity: 0; z-index: 20;}
+    100%{opacity: 0; z-index: 1;}
+}
+
+.logo{
+    position: absolute;
+    z-index: 10;
+    width: 10%;
+    margin-left: 4rem;
+    margin-top: 6rem;
+}

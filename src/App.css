@@ -12,8 +12,53 @@ html{
   font-size: 62.5%; 
 }
 
-.casa{
-  position: absolute;
-  z-index: 10;
-  cursor: pointer;
+.sent1sel{
+  z-index: 20;
+  animation: sentAppear1 .2s forwards;
+}
+
+
+.sent2sel{
+  z-index: 20;
+  animation: sentAppear2 .2s forwards;
+}
+
+.sent3sel{
+  z-index: 20;
+  /* transform: scale(1.1) rotate(-10deg); */
+  transition: all 2s;
+  animation: sentAppear3 .2s forwards;
+}
+
+@keyframes sentAppear3 {
+  0% {transform: scale(0.9) rotate(-10deg);}
+  80% {transform: scale(1.3) rotate(-10deg);}
+  100% {transform: scale(1.1) rotate(-10deg);}
+}
+@keyframes sentAppear2 {
+  0% {transform: scale(0.9);}
+  80% {transform: scale(1.3);}
+  100% {transform: scale(1.1);}
+}
+@keyframes sentAppear1 {
+  0% {transform: scale(0.9) rotate(10deg);}
+  80% {transform: scale(1.3) rotate(10deg);}
+  100% {transform: scale(1.1) rotate(10deg);}
+}
+
+
+.firstLev{
+  transform: translateX(-20rem) translateY(-2rem);
+  opacity: .5;
+}
+
+.secondLev{
+  transform: scale(1.5) translateY(2rem);
+  filter: grayscale(0%);
+  z-index: 20;
+}
+
+.thirdLev{
+  transform: translateX(20rem) translateY(-2rem);
+  opacity: .5;
 }

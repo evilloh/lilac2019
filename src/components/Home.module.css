@@ -1,9 +1,28 @@
 .homeTitle {
-    font-size: 9rem;
-    margin-top: 25rem;
-    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    margin-top: 5%;
+    margin-bottom: 1rem;
     width: 100%;
     text-align: center;
+    font-style: italic;
+}
+
+.levelTitle {
+    font-size: 4rem;
+    margin-bottom:7rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.oval{
+    width: 140vw;
+    height: 100vh;
+    background: white; 
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    top: 45%;
 }
 
 .homeContainer{
@@ -19,4 +38,29 @@
 .homeContainer p{
     font-family: OpenSans;
   font-size: 2.4rem;
+}
+
+
+.bubble{
+    filter: grayscale(100%);
+    transition: all .5s;
+    object-fit: cover;
+    height: 10rem;
+    max-height: 20rem;
+    position: absolute;
+}
+
+
+.bubblesContainer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 20%;
+    height: 22rem;
+}
+
+.bubbleLilac{
+    font-family: sans-serif;
+    font-size: 6rem;
 }

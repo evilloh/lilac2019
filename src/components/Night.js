@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import styles from './Night.module.css';
+import { Link } from 'react-router-dom';
 
 import mae from '../images/mae.png'
 import gregg from '../images/gregg.png'
 import evilloh from '../images/evilloh.png'
-import nightlogo from '../images/night logo.png'
+import nightlogo from '../images/night logo1.png'
 import dialogue1 from '../images/dialogo1.png'
 import dialogue2 from '../images/dialogo2.png'
 import dialogue3 from '../images/dialogo3.png'
-import { Link } from 'react-router-dom';
 
 class Night extends Component {
     constructor(props) {

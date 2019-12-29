@@ -2,6 +2,12 @@
     position: absolute;
     z-index: 10;
 }
+.homeIcon{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    z-index: 9;
+}
 
 .personaContainer{
     width: 100%;
@@ -34,12 +40,20 @@
     width: 70rem;
     right: -10rem;
     bottom: -2rem;
+    animation: animHead 1.2s forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
+
 }
 
+
 .logoPersona{
-    width: 60rem;
-    left: 30%;
-    top: 18%;
+    width: 34rem;
+    z-index: 9;
+    animation: animLogo .6s forwards;
+    animation-delay: 2.7s;
+    opacity: 0;
+    position: relative !important;
 }
 
 .downcornice{
@@ -59,38 +73,206 @@
     top: 20%;
     width: 51rem;
     height: 63rem;
-    
     padding: 14rem 9rem 3rem 7rem;
+    text-align: center;
 }
 
 .descriptionContainer p {
     font-size: 1.7rem;
     color: white;
     line-height: 1.4;
-    padding-top: 1rem;
+    padding-top: 3rem;
+    text-align: left;
+
 }
+
+.sent1, .sent2, .sent3{
+    cursor: pointer;
+}
+
+
 
 
 .sent1{
     z-index: 3;
-    bottom: 21rem;
-    right: 20%;
+    bottom: 30rem;
+    right: 21%;
     filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.281));
     transition: .3s all;
+    transform: scale(.9) rotate(10deg);
 }
 
-.sent1:hover{
-    filter: drop-shadow(5px 5px 5px rgba(175, 175, 175, 0.281));
+.sent1:hover, .sent2:hover, .sent3:hover{
+    filter: drop-shadow(5px 5px 5px rgba(8, 8, 8, 0.637));
 }
 
 .sent2{
     right: 20%;
-    bottom: 9rem;
+    bottom: 19rem;
     z-index: 2;
+    transform: scale(.9);
 }
 
 .sent3{
-    right: 20%;
+    right: 22%;
     z-index: 1;
-    bottom:0;
+    bottom:9rem;
+    transform: scale(.9) rotate(-10deg);
+}
+
+.blackbg{
+    background-color: rgb(22, 22, 22);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    animation: disappearBg 2s forwards;
+}
+
+.firstLoadDialogue1{
+    animation: anim1 1s forwards;
+    animation-delay: 2s;
+    opacity: 0%;
+}
+.firstLoadDialogue2{
+    animation: anim2 1s forwards;
+    animation-delay: 2.2s;
+    opacity: 0%;
+
+}
+.firstLoadDialogue3{
+    animation: anim3 1s forwards;
+    animation-delay: 2.4s;
+    opacity: 0%;
+
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 100%;
+        right: 100vw;
+        bottom: 0;
+        }
+    100% {
+        opacity: 100%;
+        right: 21%;
+        bottom: 30rem;
+    }
+}
+@keyframes anim2 {
+    0% {
+        opacity: 100%;
+        right: 100vw;
+        bottom: 0;
+        }
+    100% {
+        opacity: 100%;
+        right: 20%;
+        bottom: 19rem;
+    }
+}
+@keyframes anim3 {
+    0% {
+        opacity: 100%;
+        right: 100vw;
+        bottom: 0;
+        }
+    100% {
+        opacity: 100%;
+        right: 22%;
+        bottom: 9rem;
+    }
+}
+@keyframes animHead {
+    0% {
+    opacity: 1;
+    bottom: -100rem;
+    }
+    80% {
+    opacity: 1;
+    bottom: -1rem;
+    }
+    100% {
+    opacity: 1;
+    bottom: -4rem;
+    }
+}
+@keyframes animLogo {
+    0% {
+    opacity: 1;
+    top: -100rem;
+    }
+    80% {
+    opacity: 1;
+    top: 18%;
+    }
+    100% {
+    opacity: 1;
+    top: 13%;
+    }
+}
+
+@keyframes disappearBg {
+    0% {transform: translateY(0); display: block;}
+    100% {transform: translateY(100vw) scale(1); display: none;}
+}
+
+@keyframes disappearBg {
+    0% {transform: translateY(0); display: block;}
+    60% {transform: translateY(0); display: block;}
+    100% {transform: translateY(100vw) scale(1); display: none;}
+}
+
+
+@media screen and (max-width: 1400px) {
+    
+    .evillohPersona{
+        z-index: 1;
+        width: 54rem;
+        right: -10rem;
+        bottom: -2rem;
+        animation: animHead 1.2s forwards;
+        animation-delay: 1.7s;
+        opacity: 0;
+    }
+    .sent1, .sent2{
+        width: 55rem;
+    }
+    .sent3{
+        width: 40rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    
+    .evillohPersona{
+        z-index: 1;
+        width: 110rem;
+        right: -10rem;
+        bottom: -2rem;
+        animation: animHead 1.2s forwards;
+        animation-delay: 1.7s;
+        opacity: 0;
+    }
+    .sent1, .sent2{
+        width: 80rem;
+    }
+    .sent3{
+        width: 60rem;
+    }
+
+    .downcornice, .upcornice {
+        width: 100vw;
+    }
+
+    .descriptionContainer {
+        width: 65rem;
+        height: 80rem;
+        margin-left: 10rem;
+    }
+
+    .descriptionContainer p{
+        font-size: 2.2rem;
+        padding: 2rem 4rem;
+    }
 }
