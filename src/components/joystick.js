@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Joystick.css';
-import { Link } from 'react-router-dom';
 import { withRouter } from "react-router-dom";
 
 class Joystick extends Component {

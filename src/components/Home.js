@@ -13,7 +13,7 @@ import { useHistory } from "react-router-dom";
 class Persona extends Component {
     state = { classNight: 'thirdLev', classLilac: 'firstLev', classCeleste: 'secondLev', selected: '/celeste'}
     moveRight = () => {
-        if ( this.state.classNight == 'thirdLev') {
+        if ( this.state.classNight === 'thirdLev') {
             this.setState({classNight : 'firstLev', classCeleste : 'thirdLev', classLilac : 'secondLev', selected: '/persona'})
         } else if ( this.state.classNight == 'firstLev' ){
             this.setState({classNight : 'secondLev', classCeleste : 'firstLev', classLilac : 'thirdLev', selected: '/nightinthewoods'})
@@ -23,7 +23,7 @@ class Persona extends Component {
       }
     
       moveLeft = () => {
-        if ( this.state.classNight == 'thirdLev') {
+        if ( this.state.classNight === 'thirdLev') {
             this.setState({classNight : 'secondLev', classCeleste : 'firstLev', classLilac : 'thirdLev', selected: '/nightinthewoods'})
         } else if ( this.state.classNight == 'firstLev' ){
             this.setState({classNight : 'thirdLev', classCeleste : 'secondLev', classLilac : 'firstLev',  selected: '/celeste'})

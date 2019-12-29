@@ -4,7 +4,6 @@ import styles from './Persona.module.css';
 import evillohPersona from '../images/evillohpersona.png'
 import downcornice from '../images/cornicebassa.png'
 import upcornice from '../images/cornicealta.png'
-import descriptionContainer from '../images/description_container.png'
 import sent1 from '../images/first.png'
 import sent2 from '../images/second.png'
 import sent3 from '../images/third.png'
@@ -15,7 +14,6 @@ import logoPersona from '../images/Persona_5_logo.png'
 import rightOverlay from '../images/right_overlay.png'
 import homeIcon from '../images/lilac_persona.png'
 import video from '../video/persona5video.mp4'
-import Icon from "./Dialogueicon";
 
 import { Link } from 'react-router-dom';
 
